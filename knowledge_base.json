@@ -1,0 +1,58 @@
+[
+  {
+    "title": "DNS resolution issue",
+    "symptoms": "DNS not working hostname cannot resolve website name lookup failure",
+    "keywords": ["dns", "name resolution", "nslookup", "hostname"],
+    "summary": "A device may be unable to translate hostnames into IP addresses.",
+    "steps": [
+      "Confirm whether the issue affects one device or multiple users.",
+      "Check network connectivity to the configured DNS server.",
+      "Review the device DNS configuration and VPN/GSA connection state.",
+      "Use nslookup for a known hostname and record the DNS server shown.",
+      "Compare results with a working device; do not change DNS settings without approval."
+    ],
+    "escalate": "DNS server unreachable, widespread failures, or suspected DNS record/configuration changes."
+  },
+  {
+    "title": "Network connectivity issue",
+    "symptoms": "internet not working network disconnected cannot access network",
+    "keywords": ["network", "internet", "connectivity", "wifi", "ethernet"],
+    "summary": "Connectivity may be affected by the adapter, local network, gateway, or upstream service.",
+    "steps": [
+      "Check whether Wi-Fi/Ethernet is connected and whether other users are affected.",
+      "Confirm the device has a valid IP address, gateway, and DNS configuration.",
+      "Test reachability to the default gateway before testing external destinations.",
+      "Check VPN/GSA status and recent network changes.",
+      "Capture timestamps and error messages for troubleshooting."
+    ],
+    "escalate": "Multiple users/sites are affected, gateway is unreachable, or an outage is suspected."
+  },
+  {
+    "title": "Printer issue",
+    "symptoms": "printer not printing offline print queue stuck",
+    "keywords": ["printer", "printing", "queue", "spooler", "offline"],
+    "summary": "Printing may be blocked by printer connectivity, queue, driver, or spooler state.",
+    "steps": [
+      "Confirm printer power, paper, toner, and displayed error.",
+      "Check whether the issue affects one user or everyone using the printer.",
+      "Verify printer connectivity and the selected printer/queue.",
+      "Review pending jobs; clear jobs only after confirming with the user.",
+      "Record the printer name, error, and time of failure."
+    ],
+    "escalate": "Hardware fault, shared queue outage, or repeated driver/spooler failures."
+  },
+  {
+    "title": "Microsoft 365 sign-in issue",
+    "symptoms": "microsoft 365 login sign in outlook teams authentication error",
+    "keywords": ["m365", "office", "outlook", "teams", "authentication", "signin"],
+    "summary": "Sign-in failures can relate to account status, MFA, device compliance, Conditional Access, or service health.",
+    "steps": [
+      "Record the exact error code and correlation/request ID if shown.",
+      "Check whether the issue occurs in browser, desktop app, or mobile app.",
+      "Confirm device date/time and network connectivity.",
+      "Review Microsoft 365 service health and approved identity troubleshooting logs.",
+      "Do not ask the user to share passwords or MFA codes."
+    ],
+    "escalate": "Repeated authentication failures, Conditional Access blocks, suspected account compromise, or tenant-wide impact."
+  }
+]
